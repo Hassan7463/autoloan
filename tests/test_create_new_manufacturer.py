@@ -3,19 +3,13 @@ from pages.login_page import LoginPage
 from pages.manufacturer_listing_page import ManufacturerListingPage
 
 
-def test_create_new_manufacturer_heading_displayed(driver, base_url, credentials, login_login):
-    # login_page = LoginPage(driver)
-    # login_page.open(base_url)
-    # login_page.login(credentials["username"], credentials["password"])
+def test_create_new_manufacturer_heading_displayed(driver, login_logout):
     manufacturer_listing_page = ManufacturerListingPage(driver)
     manufacturer_listing_page.click_add_new_button()
     create_new_manufacturer_page = CreateNewManufacturer(driver)
     assert create_new_manufacturer_page.is_create_new_manufacturer_heading_displayed(), "Create New Manufacturer heading is not displayed!"
 
-def test_cancel_button_functionality(driver, base_url, credentials, login_login):
-    # login_page = LoginPage(driver)
-    # login_page.open(base_url)
-    # login_page.login(credentials["username"], credentials["password"])
+def test_cancel_button_functionality(driver, login_logout):
     manufacturer_listing_page = ManufacturerListingPage(driver)
     manufacturer_listing_page.click_add_new_button()
     create_new_manufacturer_page = CreateNewManufacturer(driver)

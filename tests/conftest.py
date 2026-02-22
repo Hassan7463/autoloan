@@ -28,7 +28,7 @@ def credentials():
     }
 
 @pytest.fixture
-def login_login(driver, base_url, credentials):
+def login_logout(driver, base_url, credentials):
     signin_page = LoginPage(driver)
     logout_page = LogoutPage(driver)
 
